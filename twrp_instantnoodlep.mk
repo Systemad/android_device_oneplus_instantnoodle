@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := instantnoodle
+PRODUCT_RELEASE_NAME := instantnoodlep
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)

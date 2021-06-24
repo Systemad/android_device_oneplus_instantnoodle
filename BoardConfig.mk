@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/oneplus/instantnoodle
+DEVICE_PATH := device/oneplus/instantnoodlep
 
 # Architecture
 TARGET_ARCH := arm64
@@ -44,7 +44,7 @@ ENABLE_SCHEDBOOST := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
-TARGET_USES_UEFI := true
+#TARGET_USES_UEFI := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
@@ -152,7 +152,7 @@ TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-PRODUCT_ENFORCE_VINTF_MANIFEST := true
+#PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Extras
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
