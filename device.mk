@@ -1,7 +1,7 @@
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-LOCAL_PATH := device/oneplus/instantnoodle
+LOCAL_PATH := device/oneplus/instantnoodlep
 
 # define hardware platform
 PRODUCT_PLATFORM := kona
@@ -35,7 +35,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # tell update_engine to not change dynamic partition table during updates
 # needed since our qti_dynamic_partitions does not include
 # vendor and odm and we also dont want to AB update them
-TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
+# TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -72,3 +72,8 @@ PRODUCT_PACKAGES_ENG += \
 # Apex libraries
 PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+
+#TWRP
+PRODUCT_COPY_FILES += \
+    device/oneplus/instantnoodlep/prebuilt/systemmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/manifest.xml \
+    device/oneplus/instantnoodlep/prebuilt/vendormanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml \

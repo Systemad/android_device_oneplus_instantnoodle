@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_instantnoodle.mk
+    $(LOCAL_DIR)/twrp_instantnoodlep.mk
 
-COMMON_LUNCH_CHOICES := twrp_instantnoodle-eng
+COMMON_LUNCH_CHOICES := twrp_instantnoodlep-eng

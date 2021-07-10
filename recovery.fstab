@@ -6,6 +6,8 @@ product                 /product       ext4    ro,barrier=1,discard      wait,sl
 vendor                  /vendor        ext4    ro,barrier=1,discard      wait,slotselect
 odm                     /odm           ext4    ro,barrier=1,discard      wait,slotselect
 
+
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard,sync                    wait,check,formattable,wrappedkey,first_stage_mount
 # Userdata partition
 /dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,formattable,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=512M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
 
